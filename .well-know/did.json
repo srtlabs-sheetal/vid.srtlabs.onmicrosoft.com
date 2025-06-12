@@ -1,0 +1,48 @@
+{
+  "id": "did:web:vid.srtlabs.onmicrosoft.com",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:vid.srtlabs.onmicrosoft.com"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://vid.srtlabs.onmicrosoft.com/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/a4261e01-bb17-4637-b5ab-89745e95d163"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#a91c607693a5493a9d77a33df1bfd588vcSigningKey-e8be8",
+      "controller": "did:web:vid.srtlabs.onmicrosoft.com",
+      "type": "JsonWebKey2020",
+      "publicKeyJwk": {
+        "crv": "P-256",
+        "kty": "EC",
+        "x": "UFSw51Hs5ln_2ow-jjOM88SsJPWb-Yc4hZ4PHI4Ii2Q",
+        "y": "Y_Tnfzyb0T4S-W0xTpgnprqMSlcXWVwh8YINcrH1A6c"
+      }
+    }
+  ],
+  "authentication": [
+    "#a91c607693a5493a9d77a33df1bfd588vcSigningKey-e8be8"
+  ],
+  "assertionMethod": [
+    "#a91c607693a5493a9d77a33df1bfd588vcSigningKey-e8be8"
+  ]
+}
